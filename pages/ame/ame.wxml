@@ -1,0 +1,20 @@
+<!--ame.wxml-->
+<view class="ame">
+
+ <view class="ame-a">
+   <view class="ame-img"><image src="{{img}}" class="in-img" background-size="cover" model="scaleToFill"></image></view>
+   <view class="ame-title">{{title}}</view>
+ </view>
+
+ <view>
+   <view class="ame-intro">{{intro}}</view>
+ </view>
+
+   <view class="ame-c">
+    <view class="ame-context">{{context}}</view>
+    <view>{{method}}</view>
+    <view>{{functions}}</view>
+    <view>{{exit}}</view>
+   </view>
+   
+ </view>

@@ -1,0 +1,12 @@
+<!--detail.wxml-->
+<view class='detail-a'>
+
+<view class='font'>{{info.title}}</view>
+<view class="table">{{info.update}}</view>
+<view class="table">{{info.acter}}</view>
+<view class="table">{{info.type}}</view>
+<view class='time'>{{info.cTime}}</view>
+<view class='detail-img'><image src="{{info.img}}" class="imgs" background-size="cover" model="scaleToFill"></image></view>
+<view class='detail-context'>{{info.page}}</view>
+
+ </view>

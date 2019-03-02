@@ -1,0 +1,12 @@
+/* pages/detail/detail.wxss */
+.detail-img{width: 350px;height: 160px;}
+.time{font-size: 16px;color: rgb(99, 97, 97)}
+.detail-context{font-size: 16px;text-indent: 1em;}
+.font{font-size: 22px;}
+.table{font-size: 14px;color: #aaa;padding: 10rpx;}
+.detail-a{height: 300px;display: flex;flex-direction: column;padding: 20rpx;}
+.detail-img{
+  text-align: center;
+  padding: 14rpx;
+}
+.imgs{width: 350px;height: 160px;}
