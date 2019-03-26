@@ -37,5 +37,11 @@ Page({
         })
       }
     })
+  },
+
+  ccc: function () {
+    wx.navigateBack({
+
+    })
   }
 })

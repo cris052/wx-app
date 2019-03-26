@@ -1,6 +1,5 @@
 <!--index.wxml-->
 <view class="container">
-
 <!-- 文章列表模板 -->
 <template name="lists">
   <view class="ame-img"><image src="{{img}}" class="in-img" background-size="cover" model="scaleToFill"></image></view>

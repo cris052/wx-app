@@ -1,0 +1,38 @@
+.switch{
+  margin: 10px 10px;
+}
+.ss-a{
+  margin-left: 100px;
+}
+.ss-b{
+  margin-left: 120px;
+}
+.ss-c{
+  margin-left: 158px;
+}
+.ss-d{
+  margin-left: 60px;
+}
+.ss-e{
+  margin-left: 160px;
+}
+.back-a{
+  background-color: #e8e3e4;
+  display: block;
+  width: 100%;
+  height: 10px;
+}
+.back-b{
+  background-color: #e8e3e4;
+  height: 30px;
+  width: 100%;
+  font-size: 12px;
+  text-indent: 1em;
+}
+.back-c{
+  background-color: #e8e3e4;
+  height: 30px;
+  width: 100%;
+  font-size: 12px;
+  text-align: center;
+}

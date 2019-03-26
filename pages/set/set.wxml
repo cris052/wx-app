@@ -1,0 +1,22 @@
+<form bindsubmit="formSubmit" bindreset="formReset">
+  <view class='ys'>账号与安全</view>
+  <view class='back-a'></view>
+  <view class='ys'>新消息通知</view>
+  <view class='back-b'></view>
+  <view bindtap='ys' class='ys'>隐私</view>
+  <view class='back-b'></view>
+  <view class='ys'>通用</view>
+  <view class='back-a'></view>
+  <view bindtap='dc' class='ys'>个人信息</view>
+  <view class='back-b'></view>
+  <view class='ys'>帮助与反馈</view>
+  <view class='back-b'></view>
+  <view class='ys'>关于微信</view>
+  <view class='back-a'></view>
+  <view class='ys'>插件</view>
+  <view class='back-a'></view>
+  <button>切换账号</button>
+  <view class='back-a'></view>
+  <button>退出登录</button>
+  <view class='back-c'></view>
+</form>

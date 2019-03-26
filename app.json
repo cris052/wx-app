@@ -2,13 +2,17 @@
   "pages":[
     "pages/list/list",
     "pages/detail/detail",
+    "pages/call/call",
     "pages/ame/ame",
+    "pages/set/set",
+    "pages/servey/servey",
+    "pages/form/form",
     "pages/index/index",
     "pages/logs/logs"
   ],
   "window":{
     "backgroundTextStyle":"light",
-    "navigationBarBackgroundColor": "#000",
+    "navigationBarBackgrounColor": "#000",
     "navigationBarTitleText": "WeChat",
     "navigationBarTextStyle":"white"
   },
@@ -16,16 +20,29 @@
     "list": [
       {
         "pagePath": "pages/list/list",
-        "text": "首页",
+        "text": "文章",
         "iconPath":"pages/images/6.jpg",
         "selectedIconPath":"pages/images/7.jpg"	
       },
       {
         "pagePath": "pages/ame/ame",
-        "text": "日志",
+        "text": "发现",
         "iconPath": "pages/images/8.jpg",
         "selectedIconPath": "pages/images/9.jpg"
+      },
+      {
+        "pagePath": "pages/call/call",
+        "text": "通讯录",
+        "iconPath": "pages/images/15.jpg",
+        "selectedIconPath": "pages/images/16.jpg"
+      },
+      {
+        "pagePath": "pages/set/set",
+        "text": "我",
+        "iconPath": "pages/images/12.jpg",
+        "selectedIconPath": "pages/images/14.jpg"
       }
+
     ]
   }
 }

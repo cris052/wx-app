@@ -1,0 +1,21 @@
+<form bindsubmit="formSubmit" bindreset="formReset">
+  <view class="section section_gap">
+    <view class="switch">加我为朋友时需要验证 <switch class='ss-a' /></view>
+    <view class='back-a'></view>
+    <view class="switch">添加我的方式</view>
+    <view class="switch">向我推荐通讯录朋友  <switch class='ss-b' /></view>
+    <view class="switch">朋友圈更新提醒   <switch class='ss-c' /></view>
+    <view class='back-b'>开启后，为你推荐已经开通微信的手机联系人。</view>
+    <view class="switch">通讯录黑名单</view>
+    <view class='back-b'>朋友圈和视频动态</view>
+    <view class="switch">不让他(她)看</view>
+    <view class="switch">不看他(她)</view>
+    <view class="switch">允许朋友查看朋友圈的范围</view>
+    <view class="switch">允许陌生人查看十条朋友圈 <switch class='ss-d' /></view>
+    <view class='back-a'></view>
+    <view class="switch">朋友圈更新提醒 <switch class='ss-e' /></view>
+    <view class='back-b'>关闭后，界面下方的"发现"切换按钮上不再出现红点提示</view>
+    <view class="switch">授权管理</view>
+    <view class='back-c'>《微信软件许可及服务协议》</view>
+  </view>
+</form>

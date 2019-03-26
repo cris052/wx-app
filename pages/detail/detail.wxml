@@ -8,5 +8,5 @@
 <view class='time'>{{info.cTime}}</view>
 <view class='detail-img'><image src="{{info.img}}" class="imgs" background-size="cover" model="scaleToFill"></image></view>
 <view class='detail-context'>{{info.page}}</view>
-
+<view class='cc' bindtap='ccc'>返回</view>
  </view>

@@ -1,0 +1,49 @@
+<form bindsubmit="formSubmit" bindreset="formReset">
+<view class="section section_gap">
+    <view class="stitle">音量控制</view>
+    <slider name="slider" show-value></slider>
+  </view>
+  
+  <view class="section">
+    <view class="stitle">喜欢这首歌的理由</view>
+    <input class='ys' placeholder="请在这里输入" />
+  </view>
+  <view class="section section_gap">
+    <view class="stitle">性别</view>
+    <radio-group class="group">
+      <label>
+        <radio value="radio1" />
+        男
+      </label>
+      <label>
+        <radio value="radio2" />
+        女
+      </label>
+    </radio-group>
+  </view>
+  <view class="section section_gap">
+    <view class="stitle">爱好</view>
+    <checkbox-group name="checkbox">
+      <label>
+        <checkbox value="checkbox1" />
+        看电影
+      </label>
+      <label>
+        <checkbox value="checkbox2" />
+        阅读
+      </label>
+       <label>
+      <checkbox value="checkbox3" />
+        摄影
+      </label>
+      <label>
+      <checkbox value="checkbox3" />
+        学习
+      </label>
+    </checkbox-group>
+  </view>
+  <view class="btn-area">
+    <button form-type="submit">提交</button>
+    <button form-type="reset">重置</button>
+  </view>
+  </form>

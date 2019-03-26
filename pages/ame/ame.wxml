@@ -18,3 +18,5 @@
    </view>
    
  </view>
+ <button bindtap='dl'>登录</button>
+ <button bindtap='pay'>支付</button>
