@@ -38,7 +38,7 @@
       },
       {
         "pagePath": "pages/set/set",
-        "text": "我",
+        "text": "设置",
         "iconPath": "pages/images/12.jpg",
         "selectedIconPath": "pages/images/14.jpg"
       }

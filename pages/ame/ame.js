@@ -13,7 +13,17 @@ Page({
     motto: 'Hello World',
     userInfo: {},
     hasUserInfo: false,
-    canIUse: wx.canIUse('button.open-type.getUserInfo')
+    canIUse: wx.canIUse('button.open-type.getUserInfo'),
+    playIndex: null,//用于记录当前播放的视频的索引值
+    courseList: [{
+      videoUrl: 'videos/1.mp4',//视频路径
+      coverUrl: 'imgs/2.jpg', //视频封面图
+      duration: '03:00', //视频时长
+    }, {
+      videoUrl: 'videos/2.mp4',
+      coverUrl: 'imgs/1.jpg',
+      duration: '04:45'
+    }]
   },
   //事件处理函数
   bindViewTap: function () {
@@ -87,5 +97,28 @@ Page({
       success(res) { },
       fail(res) { }
     })
+  },
+  videoPlay: function (e) {
+    var curIdx = e.currentTarget.dataset.index;
+    // 没有播放时播放视频
+    if (!this.data.playIndex) {
+      this.setData({
+        playIndex: curIdx
+      })
+      var videoContext = wx.createVideoContext('video' + curIdx) 
+      //这里对应的视频id
+      videoContext.play()
+    } else { 
+      // 有播放时先将prev暂停，再播放当前点击的current
+      var videoContextPrev = wx.createVideoContext('video' + this.data.playIndex)
+      if (this.data.playIndex != curIdx) {
+        videoContextPrev.pause()
+      }
+      this.setData({
+        playIndex: curIdx
+      })
+      var videoContextCurrent = wx.createVideoContext('video' + curIdx)
+      videoContextCurrent.play()
+    }
   }
 })
