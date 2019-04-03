@@ -1,6 +1,46 @@
 <!--ame.wxml-->
-<view class="ame">
+<view class='course'>我的视频</view>
+<view class='blank'></view>
+<view>
+  <!--首页-->
+  <scroll-view class='nav-page'>
+    <view class="item-box " wx:for="{{dataList}}" wx:key="item">
+      <!-- 标题层 -->
+      <view class="video-title-box" >
+        <view class='video-title'>{{item.title}}</view>
+      </view>
+      <!-- 视频图片层 -->
+      <view data-id="{{index}}" class="video-image-box" style="display: {{ _index == index ? 'none' : 'block' }};" bindtap="videoPlay">
+        <view class="video-cover-box">
+          <image class="video-image" src="{{item.cover}}" mode="aspectFit">
+          </image>
+        </view>
+        <image class="video-image-play" mode="scaleToFill"></image>
+      </view>
+      <video src="{{item.content}}" data-id="{{index}}" class='video' wx:if="{{_index == index}}" objectFit='contain' autoplay='true' controls></video>
+    </view>
+  </scroll-view>
+</view>
 
+<view class='blank'></view>
+<view class='course'>我的音乐</view>
+<view class='blank'></view>
+
+<audio poster="{{poster}}" name="{{name}}" author="{{author}}" src="{{src}}" id="myAudio" controls loop bindplay="funplay" bindpause="funpause" bindtimeupdate="funtimeupdate" bindended="funended" binderror="funerror"></audio>
+<view class='uploadimg'>
+<button type="primary" bindtap="audioPlay">播放</button>
+<button type="primary" bindtap="audioPause">暂停</button>
+</view>
+
+
+<navigator url="../phonenumber/phonenumber" class='tz'>跳转到聊天页面</navigator>
+<view class='uploadimg'>
+<button bindtap='pay' type='primary'>支付</button>
+</view>
+<view bindlongtap="phoneNumTap" class='tz'>{{phoneNum}}</view>
+<view class='blank'></view>
+
+<view class="ame">
  <view class="ame-a">
    <view class="ame-img"><image src="{{img}}" class="in-img" background-size="cover" model="scaleToFill"></image></view>
    <view class="ame-title">{{title}}</view>
@@ -10,23 +50,7 @@
    <view class="ame-intro">{{intro}}</view>
  </view>
 
-   <view class="ame-c">
-    <view class="ame-context">{{context}}</view>
-    <view>{{method}}</view>
-    <view>{{functions}}</view>
-    <view>{{exit}}</view>
+ <view class="ame-c">
+    <view class="ame-context">{{context}}    {{method}}    {{functions}}    {{exit}}</view>
    </view>
-   
  </view>
- <button bindtap='dl'>登录</button>
- <button bindtap='pay'>支付</button>
-
-<view wx:for="{{courseList}}" wx:for-item="course" class='course-pannle-item' wx:for-index="idx">
-<view class='video-item'>
-    <video wx:if='{{idx==playIndex}}' id='video{{idx}}' autoplay='{{true}}' show-center-play-btn="{{false}}" src='{{course.videoUrl}}' controls="true" objectFit="cover">
-    </video>
-    <image class='video-cover' wx:if='{{idx!=playIndex}}' mode='widthFix' src='{{course.coverUrl}}'></image>
-    <image class='video-play-btn' wx:if='{{idx!=playIndex}}' mode='widthFix' data-index='{{idx}}' bindtap='videoPlay'></image>
-    <text wx:if='{{idx!=playIndex}}' class='video-duration fs-28'>{{course.duration}}</text>
-  </view>
-</view>

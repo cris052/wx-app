@@ -15,8 +15,9 @@
   <view class='back-a'></view>
   <view class='ys'>插件</view>
   <view class='back-a'></view>
-  <button>切换账号</button>
+  <button bindtap='login'>切换账号</button>
   <view class='back-a'></view>
-  <button>退出登录</button>
+  <button >退出登录</button>
   <view class='back-c'></view>
 </form>
+

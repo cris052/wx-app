@@ -1,28 +1,33 @@
 {
-  "pages":[
+  "pages": [
     "pages/list/list",
     "pages/detail/detail",
     "pages/call/call",
     "pages/ame/ame",
+    "pages/blog/blog",
     "pages/set/set",
     "pages/servey/servey",
     "pages/form/form",
     "pages/index/index",
-    "pages/logs/logs"
+    "pages/logs/logs",
+    "pages/grinfor/grinfor",
+    "pages/phonenumber/phonenumber",
+    "pages/register/register",
+    "pages/login/login"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
+  "window": {
+    "backgroundTextStyle": "light",
     "navigationBarBackgrounColor": "#000",
     "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle":"white"
+    "navigationBarTextStyle": "white"
   },
   "tabBar": {
     "list": [
       {
         "pagePath": "pages/list/list",
         "text": "文章",
-        "iconPath":"pages/images/6.jpg",
-        "selectedIconPath":"pages/images/7.jpg"	
+        "iconPath": "pages/images/6.jpg",
+        "selectedIconPath": "pages/images/7.jpg"
       },
       {
         "pagePath": "pages/ame/ame",
@@ -33,16 +38,21 @@
       {
         "pagePath": "pages/call/call",
         "text": "通讯录",
+        "iconPath": "pages/images/10.jpg",
+        "selectedIconPath": "pages/images/11.jpg"
+      },
+      {
+        "pagePath": "pages/blog/blog",
+        "text": "博客",
         "iconPath": "pages/images/15.jpg",
         "selectedIconPath": "pages/images/16.jpg"
       },
       {
-        "pagePath": "pages/set/set",
-        "text": "设置",
+        "pagePath": "pages/grinfor/grinfor",
+        "text": "我的",
         "iconPath": "pages/images/12.jpg",
         "selectedIconPath": "pages/images/14.jpg"
       }
-
     ]
   }
 }

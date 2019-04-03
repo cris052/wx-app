@@ -1,0 +1,19 @@
+<!--pages/login.wxml-->
+<view class="login">
+    <image class="avatar"  src="../images/3.jpg" ></image>
+    <view class="doc-title zan-hairline--bottom"></view>
+    <view class="username">
+      <text class='word'>用户名</text>
+      <input placeholder="请输入你的用户名" type="text" bindinput="usernameinput" class='name'/>      
+    </view>
+   <view class="password">
+      <text class='word'>密码</text>
+      <input placeholder="请输入你的密码" type="password" bindinput="passwordinput" class='name'/> 
+    </view>
+  
+<view>
+    <button type="submit" catchtap="signin" class='signin'>登录</button>
+    <button type="submit" catchtap="register" bindtap='register' class='signin'>注册</button>
+    </view>
+</view>
+

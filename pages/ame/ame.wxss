@@ -1,40 +1,95 @@
 /* pages/me/ame.wxss */
-.ame{ }
 .ame-a{text-align: center;}
-.ame-img{display: block;width: 120px;height: 110px;margin:1px auto 0;}
+.ame-img{
+    display: block;
+    width: 120px;
+    height: 110px;
+    margin:1px auto 0;
+}
+
 .ame-title{display: inline;margin: 20px 0;}
-.ame-intro{text-indent: 2em;font-size: 16px;margin: 0 20px;line-height: 1.5;}
-.ame-c{font-size: 16px;line-height: 2;text-indent: 2em;}
-.ame-context{margin-top: 20px}
+
+.ame-intro{
+    text-indent: 2em;
+    font-size: 14px;
+    margin: 0 20px;
+    line-height: 1.5;
+}
+.ame-c{
+    font-size: 16px;
+    line-height: 2;
+    text-indent: 2em;
+}
+.ame-context{
+    margin-top: 20px;
+    font-size: 18px;
+}
 .in-img{width: 120px;height: 110px;}
 
-.video-item{
+
+.item-box .video-title-box .video-title {
+  width: 100%;
+  display: -webkit-box; 
+  -webkit-box-orient: vertical; 
+  -webkit-line-clamp:2;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  color: rgb(71, 69, 69);
+  text-indent: 1em;
+}
+
+.item-box .video-image-box {
+  height: 400rpx;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
   position: relative;
-  width: 100%;
-  height: 420rpx;
 }
-video{
-  width: 100%;
+
+.video-cover-box{
   height: 100%;
+  width: 100%;
+  background: #000;
+  text-align: center;
 }
-.video-cover{
-  position: absolute;
-  left: 0;
-  top: 0
+
+.item-box .video-image-box .video-cover-box .video-image {
+  height: 100%;
+  width: 100%;
 }
-.video-play-btn{
-  position: absolute;
-  width: 120rpx;
-  height: 120rpx;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  margin: auto
+
+.item-box .video {
+  height: 400rpx;
+  width: 100%;
+  margin: 0 10px 0 0;
+  position: relative;
 }
-.video-duration{
+
+.item-box .video-image-box .video-image-play {
   position: absolute;
-  right: 10px;
-  bottom: 10px;
-  color: #fff;
+  width: 80rpx;
+  height: 80rpx;
+  top: calc(50% - 10rpx);
+  left: calc(50% - 10rpx);
+}
+
+.uploadimg{
+    padding:1rem;
+}
+.uploadimg button{
+    margin:10px;
+}
+
+.course{
+  text-align: center;
+  font-size: 20px;
+  color: rgb(68, 67, 67)
+}
+
+.blank{
+  width: 100%;
+  height: 20px;
+}
+.tz{
+  text-indent: 3em;
 }

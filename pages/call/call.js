@@ -1,12 +1,12 @@
 Page({
   data: {
     markers: [{
-      iconPath: '1.jpg',
+      iconPath: 'imgs/1.jpg',
       id: 0,
       latitude: 23.099994,
       longitude: 113.324520,
       width: 50,
-      height: 50
+      height: 50,
     }],
     polyline: [{
       points: [{
@@ -22,7 +22,7 @@ Page({
     }],
     controls: [{
       id: 1,
-      iconPath: '2.jpg',
+      iconPath: 'imgs/2.jpg',
       position: {
         left: 0,
         top: 300 - 50,
@@ -30,7 +30,8 @@ Page({
         height: 50
       },
       clickable: true
-    }]
+    }],
+    src: ''
   },
   regionchange(e) {
     console.log(e.type)
@@ -68,20 +69,7 @@ Page({
         }
       }
     })
-  },
-  chooseimage: function () {
-    var _this = this;
-    wx.chooseImage({
-      count: 1,
-      sizeType: ['original', 'compressed'],
-      sourceType: ['album', 'camera'],
-      success: function (res) {
-        _this.setData({
-          tempFilePaths: res.tempFilePath
-        })
-      }
-    })
-  },
+    },
 
   photo:function(){
 
@@ -123,5 +111,22 @@ Page({
         })
       }
     })
+  },
+  // onReady: function (e) {
+  //   // 使用 wx.createAudioContext 获取 audio 上下文 context
+  //   this.audioCtx = wx.createAudioContext('myAudio')
+  //   this.audioCtx.setSrc('audio/鱼.mp3')
+  //   this.audioCtx.play()
+  // },
+  // audioPlay: function () {
+  //   this.audioCtx.play()
+  // },
+  // audioPause: function () {
+  //   this.audioCtx.pause()
+  // }
+
+  onReady: function (e) {
+    // 使用 wx.createAudioContext 获取 audio 上下文 context
+    this.audioCtx = wx.createAudioContext('myAudio')
   }
 })

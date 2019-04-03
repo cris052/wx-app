@@ -19,5 +19,10 @@ Page({
     wx.navigateTo({
       url: '../servey/servey?id={{id}}',
     })
+  },
+  login: function () {
+    wx.navigateTo({
+      url: '../login/login',
+    })
   }
 })

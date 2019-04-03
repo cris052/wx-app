@@ -3,7 +3,7 @@
 const app = getApp()
 Page({
   data: {
-    img:"../images/2.jpg",
+    img:"../images/17.jpg",
     title:"微信网页版 - 搜狗百科",
     intro:"2014年2月20日，腾讯宣布推出QQ浏览器微信版，由QQ浏览器与微信两个产品线团队合作，联合开发了QQ浏览器微信版，即微信浏览器。在即将发布的浏览器中，..",
     context:"内容介绍",
@@ -14,16 +14,14 @@ Page({
     userInfo: {},
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
-    playIndex: null,//用于记录当前播放的视频的索引值
-    courseList: [{
-      videoUrl: 'videos/1.mp4',//视频路径
-      coverUrl: 'imgs/2.jpg', //视频封面图
-      duration: '03:00', //视频时长
-    }, {
-      videoUrl: 'videos/2.mp4',
-      coverUrl: 'imgs/1.jpg',
-      duration: '04:45'
-    }]
+    videoPlay: null,
+    dataList: [],
+    poster: 'imgs/2.jpg',
+    name: '真相是假',
+    author: '阿鸣',
+    src: 'audio/阿鸣 - 真相是假【阿鸣】（Cover：洪卓立）.mp3',
+    phoneNum: '12345678901',
+   
   },
   //事件处理函数
   bindViewTap: function () {
@@ -70,23 +68,6 @@ Page({
       hasUserInfo: true
     })
   },
-  dl:function(){
-    wx.login({
-      success(res) {
-        if (res.code) {
-          // 发起网络请求
-          wx.request({
-            url: 'https://blog.csdn.net/qq_39925376',
-            data: {
-              code: res.code
-            }
-          })
-        } else {
-          console.log('登录失败！' + res.errMsg)
-        }
-      }
-    })
-  },
   pay:function(){
     wx.requestPayment({
       timeStamp: '',
@@ -98,27 +79,79 @@ Page({
       fail(res) { }
     })
   },
+  onLoad: function () {
+    this.getData();
+    wx.hideShareMenu();
+  },
   videoPlay: function (e) {
-    var curIdx = e.currentTarget.dataset.index;
-    // 没有播放时播放视频
-    if (!this.data.playIndex) {
-      this.setData({
-        playIndex: curIdx
+    var _index = e.currentTarget.dataset.id
+    this.setData({
+      _index: _index
+    })
+    //停止正在播放的视频
+    var videoContextPrev = wx.createVideoContext(_index + "")
+    videoContextPrev.stop();
+
+    setTimeout(function () {
+      //将点击视频进行播放
+      var videoContext = wx.createVideoContext(_index + "")
+      videoContext.play();
+    }, 500)
+  },
+  // 模拟数据加载
+  getData: function () {
+
+    this.setData({
+      dataList: [{ "id": 1, "title": "香蜜沉沉烬如霜--毛不易", "content": "videos/1.mp4", "cover": "imgs/2.jpg" }, { "id": 2, "title": "四时令--慕寒", "content": "videos/2.mp4", "cover": "imgs/1.jpg" }]
+    });
+
+  },
+  onReady: function (e) {
+    // 使用 wx.createAudioContext 获取 audio 上下文 context
+    this.audioCtx = wx.createAudioContext('myAudio')
+  },
+  audioPlay: function () {
+    this.audioCtx.play()
+  },
+  audioPause: function () {
+    this.audioCtx.pause()
+  },
+  funplay: function () {
+    console.log("audio play");
+  },
+  funpause: function () {
+    console.log("audio pause");
+  },
+  funtimeupdate: function (u) {
+    console.log(u.detail.currentTime);
+    console.log(u.detail.duration);
+  },
+  funended: function () {
+    console.log("audio end");
+  },
+  funerror: function (u) {
+    console.log(u.detail.errMsg);
+  },
+    phoneNumTap: function () {
+      var that = this;
+      // 提示呼叫号码还是将号码添加到手机通讯录
+      wx.showActionSheet({
+        itemList: ['呼叫', '添加联系人'],
+        success: function (res) {
+          if (res.tapIndex === 0) {
+            // 呼叫号码
+            wx.makePhoneCall({
+              phoneNumber: that.data.phoneNum,
+            })
+          } else if (res.tapIndex == 1) {
+            // 添加到手机通讯录
+            wx.addPhoneContact({
+              firstName: 'test',//联系人姓名
+              mobilePhoneNumber: that.data.phoneNum,//联系人手机号
+            })
+          }
+        }
       })
-      var videoContext = wx.createVideoContext('video' + curIdx) 
-      //这里对应的视频id
-      videoContext.play()
-    } else { 
-      // 有播放时先将prev暂停，再播放当前点击的current
-      var videoContextPrev = wx.createVideoContext('video' + this.data.playIndex)
-      if (this.data.playIndex != curIdx) {
-        videoContextPrev.pause()
-      }
-      this.setData({
-        playIndex: curIdx
-      })
-      var videoContextCurrent = wx.createVideoContext('video' + curIdx)
-      videoContextCurrent.play()
-    }
-  }
+    },
+  
 })

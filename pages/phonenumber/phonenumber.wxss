@@ -1,0 +1,64 @@
+/* pages/takephoto/takephoto.wxss */
+.messageList{
+  display: flex;
+  background: #ffffff;
+  flex-direction: column;
+}
+.item{
+  display: flex;
+  flex-direction: row;
+  margin: 15rpx;
+  justify-content: space-between;
+}
+.item-left{
+  display: flex;
+  flex-direction: row;
+}
+.image{
+  width: 128rpx;
+  height: 128rpx;
+  display: table-cell;
+}
+.mark{
+  position:relative;
+  width:30rpx;
+  height:30rpx;
+  border-radius: 50%;
+  background-color: red;
+  color: #ffffff;
+  text-align: center;
+  left:-20rpx;
+  font-size: 10rpx; 
+  display:table-cell;
+  padding-left: 2rpx;
+}
+.text{
+  color: #ffffff;
+  font-size: 14rpx;
+  text-align: center
+}
+
+.item-middle{
+   flex: 1;
+   margin-left: 20rpx;
+   display: flex;
+   flex-direction: column;
+   top: 10rpx;
+}
+.title{
+  overflow: hidden;
+  color: black;
+  font-size: 20px;
+
+  text-overflow: ellipsis;/*文字隐藏后添加省略号*/
+}
+.message{
+  color: #aaa;
+  font-size: 14px;
+  overflow: hidden;
+}
+.img_flag{
+  position:relative;
+  width:50rpx;
+  height:50rpx;
+}
