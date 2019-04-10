@@ -3,7 +3,7 @@
 const app = getApp()
 Page({
   data: {
-    img:"../images/17.jpg",
+    img:"../images/3.jpg",
     title:"微信网页版 - 搜狗百科",
     intro:"2014年2月20日，腾讯宣布推出QQ浏览器微信版，由QQ浏览器与微信两个产品线团队合作，联合开发了QQ浏览器微信版，即微信浏览器。在即将发布的浏览器中，..",
     context:"内容介绍",
@@ -19,8 +19,7 @@ Page({
     poster: 'imgs/2.jpg',
     name: '真相是假',
     author: '阿鸣',
-    src: 'audio/阿鸣 - 真相是假【阿鸣】（Cover：洪卓立）.mp3',
-    phoneNum: '12345678901',
+    src: 'audio/阿鸣 - 真相是假【阿鸣】（Cover：洪卓立）.mp3'
    
   },
   //事件处理函数
@@ -68,7 +67,7 @@ Page({
       hasUserInfo: true
     })
   },
-  pay:function(){
+  pay: function () {
     wx.requestPayment({
       timeStamp: '',
       nonceStr: '',
@@ -102,7 +101,7 @@ Page({
   getData: function () {
 
     this.setData({
-      dataList: [{ "id": 1, "title": "香蜜沉沉烬如霜--毛不易", "content": "videos/1.mp4", "cover": "imgs/2.jpg" }, { "id": 2, "title": "四时令--慕寒", "content": "videos/2.mp4", "cover": "imgs/1.jpg" }]
+      dataList: [{ "id": 1, "title": "MV-香蜜沉沉烬如霜(毛不易)", "content": "videos/1.mp4", "cover": "imgs/2.jpg" }, { "id": 2, "title": "MV-四时令(慕寒)", "content": "videos/2.mp4", "cover": "imgs/1.jpg" }]
     });
 
   },
@@ -131,27 +130,6 @@ Page({
   },
   funerror: function (u) {
     console.log(u.detail.errMsg);
-  },
-    phoneNumTap: function () {
-      var that = this;
-      // 提示呼叫号码还是将号码添加到手机通讯录
-      wx.showActionSheet({
-        itemList: ['呼叫', '添加联系人'],
-        success: function (res) {
-          if (res.tapIndex === 0) {
-            // 呼叫号码
-            wx.makePhoneCall({
-              phoneNumber: that.data.phoneNum,
-            })
-          } else if (res.tapIndex == 1) {
-            // 添加到手机通讯录
-            wx.addPhoneContact({
-              firstName: 'test',//联系人姓名
-              mobilePhoneNumber: that.data.phoneNum,//联系人手机号
-            })
-          }
-        }
-      })
-    },
+  }
   
 })

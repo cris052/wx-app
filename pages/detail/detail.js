@@ -20,10 +20,19 @@ Page({
       url: '../logs/logs'
     })
   },
+  pay: function () {
+    wx.requestPayment({
+      timeStamp: '',
+      nonceStr: '',
+      package: '',
+      signType: 'MD5',
+      paySign: '',
+      success(res) { },
+      fail(res) { }
+    })
+  },
   onLoad: function (options) {
     var that = this
-
-
     wx.request({
       url: 'http://localhost/weicms/index.php?s=/w16/Wxzxy/Wxzxy/getDetail',
       data: {id:options.id},

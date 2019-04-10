@@ -28,17 +28,10 @@
 
 <audio poster="{{poster}}" name="{{name}}" author="{{author}}" src="{{src}}" id="myAudio" controls loop bindplay="funplay" bindpause="funpause" bindtimeupdate="funtimeupdate" bindended="funended" binderror="funerror"></audio>
 <view class='uploadimg'>
-<button type="primary" bindtap="audioPlay">播放</button>
-<button type="primary" bindtap="audioPause">暂停</button>
+<button  bindtap="audioPlay">播放</button>
+<button  bindtap="audioPause">暂停</button>
+<button bindtap='pay'>购买此单曲</button>
 </view>
-
-
-<navigator url="../phonenumber/phonenumber" class='tz'>跳转到聊天页面</navigator>
-<view class='uploadimg'>
-<button bindtap='pay' type='primary'>支付</button>
-</view>
-<view bindlongtap="phoneNumTap" class='tz'>{{phoneNum}}</view>
-<view class='blank'></view>
 
 <view class="ame">
  <view class="ame-a">

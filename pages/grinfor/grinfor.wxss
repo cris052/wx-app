@@ -34,8 +34,8 @@
 }
 
 .money {
-    color: red;
-    font-size: 30rpx;
+    color: rgb(19, 18, 18);
+    font-size: 32rpx;
     margin-bottom: 55rpx;
     margin-left: 5rpx;
 }
@@ -81,8 +81,8 @@
 
 .Trans {
     display: flex;
-    margin-top: 30rpx;
-    margin-bottom: 30rpx;
+    margin-top: 26rpx;
+    margin-bottom: 26rpx;
 }
 
 .Instru {

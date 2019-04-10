@@ -72,7 +72,6 @@ Page({
     },
 
   photo:function(){
-
     wx.chooseImage({
       success: function (res) {
         var tempFilePath = res.tempFilePaths[0]

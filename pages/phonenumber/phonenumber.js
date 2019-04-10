@@ -3,20 +3,29 @@ Page({
   data: {
     messages: [
       {
-        url: "../images/4.jpg",
-        title: "商脉",
-        message: '好的',
+        url: "../images/31.jpg",
+        title: "小鱼",
+        message: '没问题',
         num: 2,
         time: '11:15',
         remove: false,
-        flag: '../images/7.jpg'
+        flag: '../images/14.jpg'
       },
       {
-        url: "../images/3.jpg",
-        title: "甲乙",
-        message: '好的',
-        num: 1,
+        url: "../images/32.jpg",
+        title: "小花",
+        message: '好的,明天就给你寄过去',
+        num: 0,
         time: '11:08',
+        remove: false,
+        flag: '../images/14.jpg'
+      },
+      {
+        url: "../images/33.jpg",
+        title: "小草",
+        message: '是的',
+        num: 5,
+        time: '14:05',
         remove: false,
         flag: '../images/14.jpg'
       }
@@ -32,7 +41,7 @@ Page({
     console.log('onLoad')
     var that = this
     //调用应用实例的方法获取全局数据
-    app.getUserInfo(function (userInfo) {
+    wx.getUserInfo(function (userInfo) {
       //更新数据
       that.setData({
         userInfo: userInfo

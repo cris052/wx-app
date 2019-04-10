@@ -1,10 +1,10 @@
 /* pages/detail/detail.wxss */
 .detail-img{width: 350px;height: 160px;}
 .time{font-size: 16px;color: rgb(99, 97, 97)}
-.detail-context{font-size: 16px;text-indent: 1em;}
+.detail-context{font-size: 16px;text-indent: 1em;text-overflow: ellipsis;}
 .font{font-size: 22px;}
 .table{font-size: 14px;color: #aaa;padding: 10rpx;}
-.detail-a{height: 300px;display: flex;flex-direction: column;padding: 20rpx;}
+.detail-a{height: 300px;flex-direction: column;padding: 20rpx;}
 .detail-img{
   text-align: center;
   padding: 14rpx;
@@ -12,7 +12,19 @@
 .imgs{width: 350px;height: 160px;}
 .cc{
   text-align: center;
-  margin: 30px;
+  margin: 50px;
   font-size:20px;
   color: #aaa;
+}
+.aa{
+  width: 200rpx;
+  height: 70rpx;
+  line-height: 70rpx;
+  font-size: 28rpx;
+  background: #aaa;
+  float: left;
+  margin-left: 100rpx;
+  margin-top: 12rpx;
+  color: #FFFFFF;
+  text-align: center;
 }

@@ -1,6 +1,16 @@
 <!--list.wxml-->
-<view class="list-a">
+<view class='aaa'></view>
+  <view class='page_row' bindtap="bindButtonTap">  
+      <view class="search">  
+        <view class="df search_arr">  
+          <icon class="searchcion" size='20' type='search'></icon>  
+          <input class="" disabled placeholder="请输入关键字" value="{{searchValue}}"/>  
+        </view>  
+      </view>  
+      <button class='sousuo'>搜索</button> 
+    </view>  
 
+<view class="list-a">
 <!-- 文章列表模板 -->
 <template name="list">
   <navigator url="../../pages/detail/detail?id={{id}}"

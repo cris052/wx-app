@@ -1,11 +1,11 @@
 <view>
     <view class="flex-container">
         <view class="UserHeadImage">
-            <image src="../images/17.jpg"></image>
+            <image src="../images/31.jpg"></image>
         </view>
         <view class="UserName">
             <view class="user-name"  catchtap="changeMoney">{{motto}}</view>
-            <view class="PersonalitySignature">用户可自定义个性签名(限制字数）</view>
+            <view class="PersonalitySignature">你说的都对，呵呵。</view>
         </view>
         <view class="money">{{balance}}</view>
     </view>
@@ -36,24 +36,21 @@
     </view>
     <view class="Mine">
         <view class="Trans">
-            <view>我的钱包</view>
-            <image class="Instru" src="../images/20.jpg"></image>
+            <view>账单明细</view>
+            <image class="Instru" src="../images/17.jpg"></image>
         </view>
         <view class="Trans">
             <view>我的收藏</view>
-            <image class="Instru" src="../images/21.jpg"></image>
+            <image class="Instru" src="../images/34.jpg"></image>
         </view>
         <view class="Trans">
             <view>地址管理</view>
             <image class="Instru" src="../images/29.jpg"></image>
         </view>
         <view class="Trans">
-            <view>联系客服</view>
-            <image class="Instru" src="../images/28.jpg"></image>
-        </view>
-        <view class="Trans">
-            <view>投诉建议</view>
+            <view bindlongtap="phoneNumTap">联系客服</view>
             <image class="Instru" src="../images/27.jpg"></image>
+<view class='blank'></view>
         </view>
         <view class="Trans">
             <view bindtap='set'>我的设置</view>

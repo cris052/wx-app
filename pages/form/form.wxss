@@ -2,19 +2,19 @@
   margin: 10px 10px;
 }
 .ss-a{
-  margin-left: 100px;
+  margin-left: 90px;
 }
 .ss-b{
-  margin-left: 120px;
+  margin-left: 110px;
 }
 .ss-c{
-  margin-left: 158px;
+  margin-left: 148px;
 }
 .ss-d{
   margin-left: 60px;
 }
 .ss-e{
-  margin-left: 160px;
+  margin-left: 150px;
 }
 .back-a{
   background-color: #e8e3e4;

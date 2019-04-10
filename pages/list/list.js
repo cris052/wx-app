@@ -9,7 +9,9 @@ Page({
     toastHidden: true,
     loadHidden: true,
     isfrist: 1,
-    msg: '没有更多文章了'
+    msg: '没有更多文章了',
+    focus: false,
+    inputValue: ''
   },
   loadData: function (lastid) {
     //显示出加载中的提示
@@ -83,5 +85,15 @@ Page({
   },
   modalChange: function () {
     this.setData({ confirmHidden: true })
+  },
+  bindKeyInput(e) {
+    this.setData({
+      inputValue: e.detail.value
+    })
+  },
+  bindButtonTap() {
+    this.setData({
+      focus: true
+    })
   }
 })

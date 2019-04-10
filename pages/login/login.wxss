@@ -14,16 +14,6 @@
   margin-right: 20px;
   background: rgb(20, 223, 71);
   color: #FFFFFF;
-
-  /* width: 200rpx;
-  height: 70rpx;
-  line-height: 70rpx;
-  font-size: 28rpx;
-  background: rgb(20, 223, 71);
-  float: left;
-  margin-left: 100rpx;
-  margin-top: 15rpx;
-  color: #FFFFFF; */
 }
 .name{
   text-indent: 2em;

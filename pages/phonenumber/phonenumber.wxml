@@ -15,7 +15,7 @@
           </view>
           <!--右边部分-->
           <view class="item-right">
-            <view class="item-right1"><text class="time">{{item.time}}</text></view>
+            <view class="message"><text class="time">{{item.time}}</text></view>
             <view wx:if="{{!item.remove}}" class="item-right2">
             <image src="{{item.flag}}"  class="img_flag"></image></view>
           </view>
